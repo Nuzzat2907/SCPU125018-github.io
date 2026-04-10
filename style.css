@@ -1,0 +1,80 @@
+body {
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#f5f1e8;
+    overflow-x:hidden;
+}
+
+/* Particles canvas */
+#particles {
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* Cursor */
+.cursor {
+    width:15px;
+    height:15px;
+    background:gold;
+    position:fixed;
+    border-radius:50%;
+    pointer-events:none;
+}
+
+/* Penguin */
+.penguin {
+    position:fixed;
+    top:20px;
+    right:20px;
+    font-size:50px;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Float */
+@keyframes float {
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+/* Navbar */
+header {
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    background:rgba(255,255,255,0.5);
+    backdrop-filter:blur(15px);
+}
+
+/* Sections */
+section {
+    padding:100px 20px;
+    text-align:center;
+}
+
+/* Cards */
+.card {
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(20px);
+    margin:20px;
+    padding:20px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:scale(1.1);
+}
+
+/* Fade */
+.fade {
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.fade.show {
+    opacity:1;
+    transform:translateY(0);
+}
