@@ -1,80 +1,101 @@
-body {
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background:#f5f1e8;
-    overflow-x:hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuzzat Shaikh Portfolio</title>
 
-/* Particles canvas */
-#particles {
-    position:fixed;
-    width:100%;
-    height:100%;
-    z-index:-1;
-}
+<link rel="stylesheet" href="style.css">
 
-/* Cursor */
-.cursor {
-    width:15px;
-    height:15px;
-    background:gold;
-    position:fixed;
-    border-radius:50%;
-    pointer-events:none;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
 
-/* Penguin */
-.penguin {
-    position:fixed;
-    top:20px;
-    right:20px;
-    font-size:50px;
-    animation: float 3s infinite ease-in-out;
-}
+<body>
 
-/* Float */
-@keyframes float {
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
-}
+<!-- Cursor -->
+<div class="cursor"></div>
 
-/* Navbar */
-header {
-    display:flex;
-    justify-content:space-between;
-    padding:20px;
-    background:rgba(255,255,255,0.5);
-    backdrop-filter:blur(15px);
-}
+<!-- Dark Mode -->
+<div class="toggle" onclick="toggleDark()">🌙</div>
 
-/* Sections */
-section {
-    padding:100px 20px;
-    text-align:center;
-}
+<!-- Penguin -->
+<div class="penguin">🐧</div>
 
-/* Cards */
-.card {
-    background:rgba(255,255,255,0.6);
-    backdrop-filter:blur(20px);
-    margin:20px;
-    padding:20px;
-    border-radius:20px;
-    transition:0.3s;
-}
+<!-- Navbar -->
+<header>
+    <h2>Nuzzat Shaikh</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#goals">Goals</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-.card:hover {
-    transform:scale(1.1);
-}
+<!-- Home -->
+<section id="home" class="fade">
+    <img src="assets/profile.jpg" alt="Profile" class="profile">
+    <h1>Nuzzat Shaikh</h1>
+    <p>B.Pharm Student | Future MBA Aspirant</p>
+</section>
 
-/* Fade */
-.fade {
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s;
-}
+<!-- About -->
+<section id="about" class="fade">
+    <h2>About Me</h2>
+    <p>I am a first-year Bachelor of Pharmacy student at MIT Vishwaprayag. I aim to combine pharmaceutical knowledge with business skills.</p>
 
-.fade.show {
-    opacity:1;
-    transform:translateY(0);
-}
+    <div class="skills">
+        <div class="bar"><div style="width:90%">Communication</div></div>
+        <div class="bar"><div style="width:85%">Teamwork</div></div>
+        <div class="bar"><div style="width:80%">Computer Skills</div></div>
+        <div class="bar"><div style="width:75%">Problem Solving</div></div>
+    </div>
+</section>
+
+<!-- Goals -->
+<section id="goals" class="fade highlight">
+    <h2>My Goal</h2>
+    <p>
+    As a first-year Bachelor of Pharmacy student, I am focused on building a strong academic foundation and achieving excellent grades.
+    I aspire to pursue an MBA in Business to develop leadership and management skills and integrate pharmaceutical knowledge with business expertise.
+    </p>
+</section>
+
+<!-- Achievements -->
+<section id="achievements" class="fade">
+    <h2>Achievements</h2>
+
+    <div class="card">
+        <img src="assets/cert1.jpg" alt="Certificate 1">
+        <h3>Yuva AI for All</h3>
+    </div>
+
+    <div class="card">
+        <img src="assets/cert2.jpg" alt="Certificate 2">
+        <h3>Modern AI</h3>
+    </div>
+
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="fade">
+    <h2>Gallery</h2>
+    <div class="grid">
+        <img src="assets/profile.jpg">
+        <img src="assets/cert1.jpg">
+        <img src="assets/cert2.jpg">
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="fade">
+    <h2>Contact</h2>
+    <p>Email: nuzzatshaikh169@gmail.com</p>
+    <p><a href="https://github.com/" target="_blank">GitHub</a></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
